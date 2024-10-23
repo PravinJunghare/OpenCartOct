@@ -10,13 +10,13 @@ import com.qa.opecart.base.BaseTest;
 import com.qa.opencart.constants.AppConstant;
 
 public class AccountsPageTest extends BaseTest {
-	// precodition is that user should be login for AccountsPage
+	// Precondition is that user should be login for AccountsPage
 
 	@BeforeClass
 
 	public void accPageSetup() {
-		accountsPage = loginPage.doLogin("hacaxa3208@craftapk.com", "Test@1234");
-		//accountsPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		// accountsPage = loginPage.doLogin("hacaxa3208@craftapk.com", "Test@1234");
+		accountsPage = loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 
 	}
 

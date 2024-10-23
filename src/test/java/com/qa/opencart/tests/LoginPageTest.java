@@ -31,9 +31,8 @@ public class LoginPageTest extends BaseTest {
 	@Test(priority = 4)
 	public void loginTest() {
 		// loginPage.doLogin("pravinjunghare01@yahoo.com", "Test@1234");
-		accountsPage = loginPage.doLogin("hacaxa3208@craftapk.com", "Test@1234");
-		// accountsPage = loginPage.doLogin(prop.getProperty("username").trim(),
-		// prop.getProperty("password").trim());
+		// accountsPage = loginPage.doLogin("hacaxa3208@craftapk.com", "Test@1234");
+		accountsPage = loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 		Assert.assertTrue(accountsPage.isLogoutLinkExist());
 	}
 
