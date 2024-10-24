@@ -18,7 +18,7 @@ public class Driverfactory {
 	public static String highlight;
 
 	/**
-	 * this method is initalizing the browser on the basis of browsername
+	 * this method is initalizing the browser on the basis of browser name
 	 * 
 	 * @param browserName
 	 * @return this returns the driver

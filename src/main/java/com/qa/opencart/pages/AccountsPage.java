@@ -1,6 +1,5 @@
 package com.qa.opencart.pages;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,6 +71,20 @@ public class AccountsPage {
 			accHeaderValList.add(text);
 		}
 		return accHeaderValList;
+	}
+
+	public SearchPage performSearch(String searchKey) {
+		if (isSearchExist())
+
+		{
+			eleUtil.doSendKeys(search, searchKey);
+			eleUtil.doClick(searchIcon);
+			return new SearchPage(driver);
+		} else {
+			System.out.println("Search Field is not exist on page...");
+		}
+		return null;
+
 	}
 
 }
