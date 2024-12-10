@@ -85,28 +85,80 @@ public class Driverfactory {
 		
 	}
 	
-
 	/**
-	 * This method is reading properties from properties file
+	 * This method is used to read properties from .properties file
 	 * 
 	 * @return
 	 */
-	public Properties initProp()
+	// environment specific config.file
 
-	{
+	/**
+	 * this method is reading the properties from the .properties file
+	 * 
+	 * @return
+	 */
+	public Properties initProp() {
+
+		// mvn clean install -Denv="qa"
+		// mvn clean install
 		prop = new Properties();
-		try {
-			FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");
-			prop.load(ip);
+		FileInputStream ip = null;
+		String envName = System.getProperty("env");
+		System.out.println("Running test cases on Env: " + envName);
 
+		try {
+			if (envName == null) {
+				System.out.println("no env is passed....Running tests on QA env...");
+				ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
+				}
+			else {
+				switch (envName.toLowerCase().trim()) {
+				case "qa":
+					ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
+					break;
+				case "stage":
+					ip = new FileInputStream("./src/test/resources/config/stage.config.properties");
+					break;
+				case "dev":
+					ip = new FileInputStream("./src/test/resources/config/dev.config.properties");
+					break;
+				case "prod":
+					ip = new FileInputStream("./src/test/resources/config/config.properties");
+					break;
+
+				default:
+					System.out.println("....Wrong env is passed....No need to run the test cases....");
+					//throw new FrameworkException("WRONG ENV IS PASSED...");
+				 //break;
+				}
+
+			}
+		} catch (FileNotFoundException e) {
+
+		}
+
+		try {
+			prop.load(ip);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		return prop;
 	}
 	
+	/*
+	// old code
+	public Properties initProp() {
+	 prop = new Properties(); 
+	 try { FileInputStream ip = new
+	  FileInputStream("./src/main/resources/config/config.properties");
+	 prop.load(ip);
+	 } catch (IOException e) { // TODO Auto-generated catch block
+	 e.printStackTrace(); }
+	 
+
+	 return prop;
+	}
 	
 	/**
 	 * take screenshot

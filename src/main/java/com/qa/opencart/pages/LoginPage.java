@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import com.qa.opencart.constants.AppConstant;
 import com.qa.opencart.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 public class LoginPage {
 	private WebDriver driver;
 	private ElementUtil eleUtil;
@@ -24,35 +26,39 @@ public class LoginPage {
 	}
 
 	// 3.Page Actions/Methods
-
+	@Step("Getting Login Page Title...")
 	public String getLoginPageTitle() {
 		// String title = driver.getTitle();
 		// String title = eleUtil.waitForTitleContainsAndFetch(10, "Account Login");
-		String title = eleUtil.waitForTitleContainsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT, AppConstant.LOGIN_PAGE_TITLE_VALUE);
+		String title = eleUtil.waitForTitleContainsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT,
+				AppConstant.LOGIN_PAGE_TITLE_VALUE);
 		return title;
 	}
 
+	@Step("Getting Login Page Url...")
 	public String getLoginUrl() {
 		// String url = driver.getCurrentUrl();
 		// String url = eleUtil.waitForURLContainsAndFetch(10, "route=account/login");
-		String url = eleUtil.waitForURLContainsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT, AppConstant.LOGIN_PAGE_URL_FRACTION_VALUE);
+		String url = eleUtil.waitForURLContainsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT,
+				AppConstant.LOGIN_PAGE_URL_FRACTION_VALUE);
 		return url;
 	}
 
 	public boolean isForgotpwdLinkExits() {
 		// return driver.findElement(forgottenPwdlink).isDisplayed();
-		//return eleUtil.waitForElementVisible(forgottenPwdlink, 10).isDisplayed();
+		// return eleUtil.waitForElementVisible(forgottenPwdlink, 10).isDisplayed();
 		return eleUtil.waitForElementVisible(forgottenPwdlink, AppConstant.DEFAULT_MEDIUM_TIMEOUT).isDisplayed();
 
 	}
 
 	public boolean isregistetLinkExits() {
 		// return driver.findElement(registerlink).isDisplayed();
-		//return eleUtil.waitForElementVisible(registerlink, 10).isDisplayed();
+		// return eleUtil.waitForElementVisible(registerlink, 10).isDisplayed();
 		return eleUtil.waitForElementVisible(registerlink, AppConstant.DEFAULT_MEDIUM_TIMEOUT).isDisplayed();
 
 	}
 
+	@Step("Login  username {0} and password {1}")
 	public AccountsPage doLogin(String un, String pwd) {
 		// driver.findElement(emailId).sendKeys(un);
 		// driver.findElement(password).sendKeys(pwd);
@@ -66,12 +72,11 @@ public class LoginPage {
 		return new AccountsPage(driver);
 
 	}
-	
-	public RegistrationPage navigateToRegisterPage()
-	{
+
+	@Step("Navigating to Registration Page")
+	public RegistrationPage navigateToRegisterPage() {
 		eleUtil.doClick(registerlink);
 		return new RegistrationPage(driver);
 	}
-
 
 }
