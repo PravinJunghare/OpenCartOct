@@ -1,0 +1,53 @@
+[33mcommit 60d96480af1abec71be6bf94250087aad2367ac7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mDay8[m[33m, [m[1;31morigin/Day8[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Tue Dec 10 11:51:45 2024 +0530
+
+    Added AllureReportFeatures_RetryLogic_MultipleEnvironmentSetup_MavenCommandLineArguments.mp4
+
+[33mcommit dc73ce45169d492113e9dedcd36a0713b530c295[m[33m ([m[1;31morigin/Day7[m[33m, [m[1;32mDay7[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Thu Nov 28 14:01:45 2024 +0530
+
+    ThreadLocal,Extent Report, Allure Report
+
+[33mcommit f24ec0fb34917a2e89fc24feb739ba49f6a050c3[m[33m ([m[1;31morigin/Day6[m[33m, [m[1;32mDay6[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Thu Nov 21 16:37:10 2024 +0530
+
+    Excel Integration for Register user
+
+[33mcommit 4b933d4ec78072291017212351369a77d4c5bd1b[m[33m ([m[1;31morigin/day5[m[33m, [m[1;32mday5[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Tue Nov 19 16:14:31 2024 +0530
+
+    Add to Cart Scenario
+
+[33mcommit 23896a4d6a2529b996a696ee40d73ea07a1840c8[m[33m ([m[1;31morigin/Day4[m[33m, [m[1;32mDay4[m[33m, [m[1;32mDay3[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Thu Oct 24 14:22:59 2024 +0530
+
+    Day4 Added SearchPage and DataProvider
+
+[33mcommit 76db7e93d09dbd37987eb137087ee089164f0550[m[33m ([m[1;31morigin/Day3[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Wed Oct 23 14:57:08 2024 +0530
+
+    Day3 Added Properties file and OptionMangerClass
+
+[33mcommit f669d5536459b5c2dd353f651a82b54c5d6e502c[m[33m ([m[1;31morigin/Day2[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Wed Oct 23 10:39:52 2024 +0530
+
+    Day2 Added ElementUtil and  Constants
+
+[33mcommit 5d1818ffd33903901ca4c7ab1ed796511100e82a[m[33m ([m[1;31morigin/Day1[m[33m, [m[1;32mDa2[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Mon Oct 21 14:46:53 2024 +0530
+
+    Day1 folder structure and LoginPageTest
+
+[33mcommit 3e556f86730a98a5a5bc4155db527f7f023c22b7[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: PravinJunghare <PravinJunghare01@gmail.com>
+Date:   Mon Oct 21 14:25:33 2024 +0530
+
+    Day1 Folder structure and LoginPageTest

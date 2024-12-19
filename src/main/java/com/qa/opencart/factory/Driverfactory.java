@@ -70,7 +70,7 @@ public class Driverfactory {
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
 		// driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
-		getDriver().get(prop.getProperty("url"));
+		getDriver().get(prop.getProperty("url").trim());
 		return getDriver();
 
 	}
