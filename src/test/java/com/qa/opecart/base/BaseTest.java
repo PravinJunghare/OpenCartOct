@@ -1,25 +1,39 @@
 package com.qa.opecart.base;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.asserts.SoftAssert;
 
 import com.qa.opencart.factory.Driverfactory;
 import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.pages.LoginPage;
+import com.qa.opencart.pages.ProductInfoPage;
+import com.qa.opencart.pages.RegistrationPage;
+import com.qa.opencart.pages.SearchPage;
 
 public class BaseTest {
 
 	Driverfactory df;
 	WebDriver driver;
+	protected Properties prop;
 	protected LoginPage loginPage;
 	protected AccountsPage accountsPage;
+	protected SearchPage searchPage;
+	protected ProductInfoPage productInfoPage;
+	protected RegistrationPage registrationPage;
 
+	protected SoftAssert softAssert;
 	@BeforeTest
 	public void setUp() {
 		df = new Driverfactory();// created driver factory object
-		driver = df.initDriver("chrome");// to call initDriver method to get driver
+		prop = df.initProp();// df.initProp() will give prop reference
+		// driver = df.initDriver("chrome");// to call initDriver method to get driver
+		driver = df.initDriver(prop);
 		loginPage = new LoginPage(driver);
+		 softAssert=new SoftAssert();
 	}
 
 	@AfterTest
